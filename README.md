@@ -16,9 +16,9 @@ Brought to you by the [Papyros development team](https://github.com/papyros/qml-
 ### Install ###
 
 ```
-qmake
-make check
+qmake CONFIG+=build_all
 make install
+make check
 ```
 
 ### Example ###
