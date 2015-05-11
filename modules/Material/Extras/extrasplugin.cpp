@@ -16,15 +16,12 @@ static const struct {
     { "Object", 0, 1 }
 };
 
-
-#include <QDebug>
-
 void ExtrasPlugin::registerTypes(const char *uri)
 {
     const QString filesLocation = fileLocation();
-    qDebug() << "uri " << uri << ", " << filesLocation;
     for (int i = 0; i < int(sizeof(qmldir)/sizeof(qmldir[0])); i++)
-        qmlRegisterType(QUrl(filesLocation + "/" + qmldir[i].type + ".qml"), uri, qmldir[i].major, qmldir[i].minor, qmldir[i].type);
+        qmlRegisterType(QUrl(filesLocation + "/" + qmldir[i].type + ".qml"), uri,
+                        qmldir[i].major, qmldir[i].minor, qmldir[i].type);
 }
 
 QString ExtrasPlugin::fileLocation() const
