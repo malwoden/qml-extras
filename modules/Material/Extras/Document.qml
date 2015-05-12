@@ -18,6 +18,7 @@
  */
 
 import QtQuick 2.0
+import Material.Extras 0.1
 
 Object {
     id: document

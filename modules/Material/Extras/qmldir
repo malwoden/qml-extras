@@ -1,5 +1,6 @@
 module Material.Extras
-plugin extras
+plugin materialextras
+classname ExtrasPlugin
 typeinfo plugins.qmltypes
 DateUtils 0.1 qrc:/Material/Extras/js/dateutils.js
 Http 0.1 qrc:/Material/Extras/js/httplib.js

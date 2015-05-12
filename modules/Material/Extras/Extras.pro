@@ -1,7 +1,7 @@
 TEMPLATE = lib
-CONFIG += plugin
+TARGET = $$qtLibraryTarget(materialextras)
 QT += qml quick
-TARGET = $$qtLibraryTarget(extras)
+CONFIG += qt plugin
 
 uri = Material.Extras
 
@@ -23,9 +23,10 @@ HEADERS += $$PWD/extrasplugin.h
 
 RESOURCES += extras.qrc
 
-target.path = $$[QT_INSTALL_QML]/Material/Extras
+installPath = $$[QT_INSTALL_QML]/$$replace(uri, \\., /)
 
-qmlfiles.files += $$QML_FILES $$PWD/qmldir $$PWD/plugins.qmltypes
-qmlfiles.path = $$[QT_INSTALL_QML]/Material/Extras
+qmlfiles.files += $$PWD/qmldir $$PWD/plugins.qmltypes
+qmlfiles.path = $$installPath
+target.path = $$installPath
 
-INSTALLS += target qmldir qmlfiles
+INSTALLS += target qmlfiles
