@@ -13,6 +13,5 @@
         <file alias="js/listutils.js">js/listutils.js</file>
         <file alias="js/promises.js">js/promises.js</file>
         <file alias="js/utils.js">js/utils.js</file>
-        <file>qmldir</file>
     </qresource>
 </RCC>
